@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Embedded Home
+title: Embedded Weekly
 ---
 
 # ยินดีต้อนรับสู่ Embedded Class 🎉
