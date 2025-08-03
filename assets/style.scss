@@ -14,6 +14,21 @@ a {
   color: #007acc;
   text-decoration: none;
 }
+.navbar {
+  background-color: #eee;
+  padding: 0.5rem 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.navbar a {
+  color: #333;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
 
 a:hover {
   text-decoration: underline;
