@@ -1,4 +1,5 @@
 title: Embedded Weekly
-theme: minima
+theme: cayman
+description: A weekly newsletter about embedded systems and IoT.
 markdown: kramdown
 permalink: pretty
