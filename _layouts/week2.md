@@ -1,7 +1,7 @@
 ---
 layout: default
 title: WEEK2
-permalink: /week2/
+permalink: /_layouts/week2.md
 ---
 
 # **ET-ESP32-RS485 V2 Board + Arduino  Cloud Plaform**
