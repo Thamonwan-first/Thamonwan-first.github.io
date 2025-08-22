@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Embedded Weekly
+title: Thamonwan-First
 ---
 
 # ยินดีต้อนรับสู่ Embedded Class 🎉

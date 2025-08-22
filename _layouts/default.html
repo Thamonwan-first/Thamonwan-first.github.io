@@ -3,21 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>{{ page.title }} | {{ site.title }}</title>
+  <title style="display: flex; justify-content: center;">{{ page.title }} | {{ site.title }}</title>
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 
 </head>
 <body>
-  <header>
-    <h1><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
-  </header>
   
-  <div class="navbar">
-    <a href="/">Embedded</a>
+  
+  <span class="navbar">
+    
     <a href="/week1" class="{% if page.url == '/week1/' %}active{% endif %}">WEEK1</a>
     <a href="/week2" class="{% if page.url == '/week2/' %}active{% endif %}">WEEK2</a>
     <a href="/week3" class="{% if page.url == '/week3/' %}active{% endif %}">WEEK3</a>
-  </div>
+    <a href="/week4" class="{% if page.url == '/week4/' %}active{% endif %}">WEEK4</a>
+    <a href="/week5" class="{% if page.url == '/week5/' %}active{% endif %}">WEEK5</a>
+    <a href="/week6" class="{% if page.url == '/week6/' %}active{% endif %}">WEEK6</a>
+    <a href="/week8" class="{% if page.url == '/week8/' %}active{% endif %}">WEEK8</a>
+    <a href="/week9" class="{% if page.url == '/week9/' %}active{% endif %}">WEEK9</a>
+    <a href="/week10" class="{% if page.url == '/week10/' %}active{% endif %}">WEEK10</a>
+    <a href="/week11" class="{% if page.url == '/week11/' %}active{% endif %}">WEEK11</a>
+    <a href="/week12" class="{% if page.url == '/week12/' %}active{% endif %}">WEEK12</a>
+  </span>
   <main>
     {{ content }}
   </main>
