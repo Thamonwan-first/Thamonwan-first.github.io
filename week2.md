@@ -21,7 +21,7 @@ permalink: /week2/
 
 ## 4-Lamp
 
-<img src="/assets/week2/RelayCtlLamp.jpg" width="400" alt="RelayCtlLamp">
+![](/assets/week2/RelayCtlLamp.jpg)
 
 ```cpp
 #include "Arduino.h"
@@ -56,13 +56,18 @@ void loop() {
     pin = pin >= 3 ? 0 : pin += 1;
 }
 ```
+
 ผลลัพธ์ที่ได้
+
 ![](/assets/week2/result1.jpg)
-##
+
+
 
 
 ## Green Lamp + Green Switch , Black Lamp + Yellow Switch , RED Lamp + RED Switch
+
 ![](/assets/week2/inputtorelay.jpg)
+
 ```cpp
 #include "Arduino.h"
 #include "PCF8574.h"  // https://github.com/xreef/PCF8574_library
