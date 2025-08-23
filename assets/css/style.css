@@ -14,3 +14,25 @@
   display: block;
   margin: 10px auto;
 }
+
+/* แก้ style ของ code block */
+pre, code {
+  background: #2d2d2d;   /* พื้นหลังโค้ด (สีดำเทา) */
+  color: #f8f8f2;        /* สีตัวอักษร */
+  border: none;          /* ไม่เอากรอบเหลือง */
+  border-radius: 6px;    /* มุมโค้ง */
+  padding: 10px;         /* ระยะห่างด้านใน */
+  font-family: "Fira Code", "Consolas", "Courier New", monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  display: block;
+  overflow-x: auto;      /* เลื่อนในแนวนอนได้ */
+}
+
+/* inline code (ที่อยู่ในบรรทัดเดียว) */
+p code, li code {
+  background: #f4f4f4;
+  color: #c7254e;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
