@@ -20,7 +20,8 @@ permalink: /week2/
 #
 
 ## 4-Lamp
-![](/assets/week2/RelayCtlLamp.jpg)
+
+<img src="/assets/week2/RelayCtlLamp.jpg" width="400" alt="RelayCtlLamp">
 
 ```cpp
 #include "Arduino.h"

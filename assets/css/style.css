@@ -1,1 +1,9 @@
-@import "custom"; 
+.content-container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 24px;
+  background: #fffbea;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
