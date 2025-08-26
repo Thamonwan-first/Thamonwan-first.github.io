@@ -19,7 +19,10 @@ permalink: /week2/
 [7. Smart Phone + RED Lamp + RED Switch](#smart-phone--red-lamp--red-switch)
 #
 
-## 4-Lamp
+
+
+## **4-Lamp**
+
 
 ![](/assets/week2/RelayCtlLamp.jpg)
 
@@ -57,14 +60,18 @@ void loop() {
 }
 ```
 
-ผลลัพธ์ที่ได้
+
+**ผลลัพธ์ที่ได้**
+
 
 ![](/assets/week2/result1.jpg)
 
 
 
 
-## Green Lamp + Green Switch , Black Lamp + Yellow Switch , RED Lamp + RED Switch
+
+## **Green Lamp + Green Switch , Black Lamp + Yellow Switch , RED Lamp + RED Switch**
+
 
 ![](/assets/week2/inputtorelay.jpg)
 
@@ -130,17 +137,20 @@ void loop() {
 }
 ```
 
-## Smart Phone + White Lamp
+**ผลลัพธ์ที่ได้**
+
+## **Smart Phone + White Lamp**
 ...เนื้อหา...
 
-## Smart Phone + Rly1, Rly2
+## **Smart Phone + Rly1, Rly2**
 ...เนื้อหา...
 
-## Smart Phone + Green Lamp + Green Switch
+## **Smart Phone + Green Lamp + Green Switch**
 ...เนื้อหา...
 
-## Smart Phone + Black Lamp + Yellow Switch
+## **Smart Phone + Black Lamp + Yellow Switch**
 ...เนื้อหา...
 
-## Smart Phone + RED Lamp + RED Switch
+## **Smart Phone + RED Lamp + RED Switch**
+
 ...เนื้อหา...
