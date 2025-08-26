@@ -1,0 +1,18 @@
+title: Thamonwan-First
+author: Thamonwan First
+theme: jekyll-theme-cayman
+description: A weekly newsletter about embedded systems and IoT.
+
+sass:
+  load_paths:
+    - _sass
+    - _sass/custom
+
+markdown: kramdown
+kramdown:
+  input: GFM           # หรือ :kramdown ก็ได้
+  hard_wrap: false
+  parse_block_html: true
+  syntax_highlighter: rouge
+  auto_ids: true
+  attribute_list: true  # <-- เปิดใช้งาน attribute list
