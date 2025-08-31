@@ -143,7 +143,7 @@ permalink: /week3/
 ![](/assets/week3/bb262d2a-67ba-4d89-9810-57b4aecbf214.jpg)
 
 ## **LOGO8_t10_Samkoon_LOGO8**
-* 10.5Test with Samkoon HMI
+* 10.5Test with Samkoon HMI 
   * 10.5.1 Install Samkoon Software “SKTOOLV7.0.0.35_setup(20191220)”
   * 10.5.2 Open SKTOOL7.0 → New Project → Model=SK-070HS
 
@@ -223,14 +223,76 @@ Address for Link1
 
 
 Modbus Poll
-• Write Single Register
-• ID = 1
-• Function = 6
-• Address = 0x003
-• Value = 0x0100
+* Write Single Register
+* ID = 1
+* Function = 6
+* Address = 0x003
+* Value = 0x0100
 
-![](/assets/week3/Screenshot%202025-08-25%20211540.png)
+| ![](/assets/week3/Screenshot%202025-08-25%20211540.png)  |
+|---|
+| Frame = 00 98 00 00 00 06 01 06 00 03 01 00 
+ ID = 01
+  Function = 06 
+ Address = 00 03 
+ Value = 01 00    |
 
+Select Bit Switch 
 
+![alt text](image-11.png)
+
+| ![](/assets/week3/Screenshot%202025-08-31%20000144.png)  |
+|---|
+| Edit 
+• Shape 
+• Border = Gold 
+• FG = Black 
+• BG = Gold 
+• Function = Set ON 
+• Mode = Press Execute 
+• Write Address = LB0 
+• Appearance, Text = Set On  |
+| Place Bit Switch Copy 4 Bit Switch and Edit 
+• Set ON, LB0 
+• Set ON, LB1 
+• Set ON, LB2 
+• Set ON, LB3 |
+
+11.1 Download to SAMKOON Device 
+* Connect 
+   * 24VDC 
+   * USB Cable 
+   * Ethernet 
+* Download
+![alt text](image-12.png)
+
+> **ผลลัพธ์ที่ได้** :sunflower: 
+![](/assets/week3/a69fd1dd-af25-4093-8179-52a9e19a8434.jpg)
 
 ## **LOGO8_t90_Traffic_Light**
+
+ให้เขียน FBD ควบคุมไฟจราจร  
+>![](/assets/week3/66342955-6554-4778-b9a7-144f152cda50.jpg)
+* ควบคุมไฟจราจรชุดเดียว ที่มี ไฟแดง ไฟเหลือง ไฟเขียว 
+* สวิตซ์ควบคุม 2 ตัว สีแดงเลือกโหมดการทำงาน สีเขียวเลือกจังหวะการทำงาน 
+* การทำงานมี 3 โหมด คือ ทำงานอัตโนมัติ เหลืองกระพริบ และควบคุมด้วยมือ 
+* สามารถควบคุมระยะไกลผ่าน Modbus-TCP 
+* โหมดทำงานอัตโนมัติ 
+  * ไฟเขียว 4 วินาที 
+  * ไฟเหลือง 1 วินาที, ไฟแดง 5 วินาที 
+>![](/assets/week3/d42f704a-42f7-485b-87a9-6466633a1e5b.jpg)
+![](/assets/week3/c477bf14-a6c5-4dbd-850b-299bd0f5f92a.jpg)
+![](/assets/week3/a4c7216d-ff04-46f2-bdb6-0a75824a70c4.jpg)
+* โหมดเหลืองกระพริบ 
+  * ไฟเหลืองติด 1 วินาที 
+  * ไฟเหลืองดับ 1 วินาที 
+>![](/assets/week3/3da0f8b9-a129-4bbf-8e33-3f22ea054082.jpg)
+![](/assets/week3/7630afbb-252a-477c-b115-c13b374de06c.jpg)
+
+
+* โหมดควบคุมด้วยมือ 
+  * ไฟเขียว → รอกดสวิตซ์สีเขียวเพื่อเปลี่ยนจังหวะการทำงาน 
+  * ไฟเหลือง 1 วินาที, ไฟแดง →รอกดสวิตซ์สีเขียวเพื่อเปลี่ยนจังหวะการทำงาน
+>![](/assets/week3/701a8f1d-04cc-4ffe-b3da-7b891fd46dd1.jpg)
+![](/assets/week3/eaa9769d-db48-4e90-9fcf-cc42b01ff61f.jpg)
+![](/assets/week3/83be9c00-ffcd-4eb8-a92a-e9e24793b9e6.jpg)
