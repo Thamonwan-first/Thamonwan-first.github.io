@@ -358,3 +358,118 @@ cv2.destroyAllWindows()
 > * ติดตั้ง Ultralytics
 pip install ultralytics
 ![alt text](image-64.png)
+
+> * **yoloV8 Video Test**
+> ![](/assets/week8/6c064c65-18cf-43dc-b615-22579640627f%20(1).jpg)
+```cpp
+import cv2
+from ultralytics import YOLO
+model = YOLO('/home/pi/OpenCV_File/data/yolov8n.pt', verbose=False)
+video_path = "/dev/video0"
+cap = cv2.VideoCapture(video_path)
+while cap.isOpened():
+success, frame = cap.read()
+if success:
+results = model(frame, conf=0.75, verbose=True)
+annotated_frame = results[0].plot()
+cv2.imshow("YOLOv8 Result", annotated_frame)
+if cv2.waitKey(1) & 0xFF == ord("q"):
+break
+else:
+break
+cap.release()
+cv2.destroyAllWindows()
+```
+
+> **ผลลัพธ์ที่ได้** 
+> ![](/assets/week8/a69bc4a2-e7d9-44de-ac9d-6dcb480260ec.jpg)
+
+> * **Application: Car Counter with Yolo**
+> ![](/assets/week8/87499e0b-98eb-4395-afae-7b2261fa8faa.jpg)
+```cpp
+import cv2
+from ultralytics import YOLO
+model = YOLO('/home/pi/OpenCV_File/data/yolov8n.pt', verbose=False)
+video_path = "/home/pi/OpenCV_File/video/ThaiTraffic04_480.mp4"
+roiX,roiY,roiW,roiH = 10, 150, 280, 300
+frame_kStep, frame_count = 8, 0
+cap = cv2.VideoCapture(video_path)
+while cap.isOpened():
+frame_count += 1
+success, mainFrame = cap.read()
+if success:
+if frame_count % frame_kStep == 0:
+frame = mainFrame[roiY:roiY+roiH, roiX:roiX+roiW]
+results = model(frame, conf=0.55, verbose=True)
+annotated_frame = results[0].plot()
+mainFrame[roiY:roiY+roiH, roiX:roiX+roiW] = annotated_frame
+cv2.rectangle(mainFrame, (roiX,roiY), (roiX+roiW,roiY+roiH), (128,0,128), 1)
+cv2.imshow("YOLOv8 Inference", annotated_frame)
+cv2.imshow("YOLOv8 Inference M", mainFrame)
+if cv2.waitKey(1) & 0xFF == ord("q"):
+break
+else:
+break
+cap.release()
+cv2.destroyAllWindows()
+```
+
+> **ผลลัพธ์ที่ได้** 
+> ![](/assets/week8/45987999-6eed-43f3-b9d2-09263d1e9a2a.jpg)
+>
+> * **Count and classify with yoloV8**
+> ![alt text
+> ](image-65.png)
+```cpp
+import cv2
+from ultralytics import YOLO
+model = YOLO('/home/pi/OpenCV_File/data/yolov8n.pt')
+video_path = "/home/pi/OpenCV_File/video/ThaiTraffic04_480.mp4"
+roiX,roiY,roiW,roiH = 10, 150, 280, 300
+lineY = int(0.8*(roiY+roiH))
+nCar, nTruck, nMotorC = 0,0,0
+font = cv2.FONT_HERSHEY_PLAIN
+frame_kStep, frame_kRepeat, frame_repeat, frame_count = 8, 4, 0, 0
+cap = cv2.VideoCapture(video_path)
+while cap.isOpened():
+frame_count += 1
+success, mainFrame = cap.read()
+if success:
+if frame_count % frame_kStep == 0:
+if frame_repeat > 0 :
+frame_repeat -= 1
+frame = mainFrame[roiY:roiY+roiH, roiX:roiX+roiW]
+results = model(frame, conf=0.55, verbose=True)
+annotated_frame = results[0].plot()
+for r in results:
+boxes = r.boxes
+for box in boxes:
+cls = int(box.cls[0])
+x1, y1, x2, y2 = box.xyxy[0]
+x1, y1, x2, y2 = int(x1)+roiX, int(y1)+roiY, int(x2)+roiX, int(y2)+roiY
+if (frame_repeat==0) and (y1<lineY) and (y2>lineY):
+frame_repeat = frame_kRepeat
+if (cls==2): # car id = 2
+nCar += 1
+if (cls==7): # truck id = 7
+nTruck += 1
+if (cls==3): # Motorcycle id = 3
+nMotorC += 1
+mainFrame[roiY:roiY+roiH, roiX:roiX+roiW] = annotated_frame
+cv2.rectangle(mainFrame, (roiX,roiY), (roiX+roiW,roiY+roiH), (128,0,128), 1)
+cv2.line(mainFrame, (roiX,lineY), (roiX+roiW,lineY), (128,0,128), 1)
+cv2.putText(mainFrame, " nCar = " + str(nCar), (roiX+roiW, roiY+roiH-60), font, 2, (255, 0, 0), 2)
+cv2.putText(mainFrame, " nTruck = " + str(nTruck), (roiX+roiW, roiY+roiH-30), font, 2, (255, 0, 0), 2)
+cv2.putText(mainFrame, " nMotorC = " + str(nMotorC), (roiX+roiW, roiY+roiH), font, 2, (255, 0, 0), 2)
+cv2.imshow("YOLOv8 Inference", annotated_frame)
+cv2.imshow("YOLOv8 Inference M", mainFrame)
+if cv2.waitKey(1) & 0xFF == ord("q"):
+break
+else:
+break
+cap.release()
+cv2.destroyAllWindows()
+```
+
+> **ผลลัพธ์ที่ได้** 
+> ![alt text](image-66.png)
