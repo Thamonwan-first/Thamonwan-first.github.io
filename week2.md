@@ -137,20 +137,3 @@ void loop() {
 }
 ```
 
-**ผลลัพธ์ที่ได้**
-
-## **Smart Phone + White Lamp**
-...เนื้อหา...
-
-## **Smart Phone + Rly1, Rly2**
-...เนื้อหา...
-
-## **Smart Phone + Green Lamp + Green Switch**
-...เนื้อหา...
-
-## **Smart Phone + Black Lamp + Yellow Switch**
-...เนื้อหา...
-
-## **Smart Phone + RED Lamp + RED Switch**
-
-...เนื้อหา...

@@ -293,10 +293,11 @@ return msg;
 ![alt text](image-88.png)
 
 >* flow NodeRed
-
+![](/assets/week10/Screenshot%202025-09-17%20133744.png)
 
 
 >* code Grafana
+
 ```cpp
 <div style="font-size: 24px;display: flex;flex-wrap: wrap;justify-content: center;gap: 20px; ">
   <a href="http://192.168.1.174:1880/control/led/on21" style="background: white; color: #2c3e50; transform: translateY(-3px);padding:20px;border-radius:10px 10px 10px 10px">on</a>
@@ -306,7 +307,6 @@ return msg;
   <a href="http://192.168.1.174:1880/control/led/on23"style="background: green; color: #fff;    transform: translateY(-3px);padding:20px;border-radius:10px 10px 10px 10px">on</a>
   <a href="http://192.168.1.174:1880/control/led/off23"style="background: green; color: #fff;    transform: translateY(-3px);padding:20px;border-radius:10px 10px 10px 10px">off</a>
 </div>
-
 <div style="font-size: 24px;display: flex;flex-wrap: wrap;justify-content: center;gap: 20px; margin-top:10px" >
   <a href="http://192.168.1.174:1880/control/led/fac2/on21" style="background: blue; color: #fff; transform: translateY(-3px);padding:20px;border-radius:10px 10px 10px 10px">on</a>
   <a href="http://192.168.1.174:1880/control/led/fac2/off21"style="background: blue; color: #fff; transform: translateY(-3px);padding:20px;border-radius:10px 10px 10px 10px">off</a>
@@ -323,6 +323,8 @@ return msg;
 
 #####	หากเกิด Alarm ตาม Mission2 ให้ LED ทั้ง 3 ตัวกระพริบ
 >* flow NodeRed
+
+![](/assets/week10/Screenshot%202025-09-17%20133826.png)
 
 ***ESP32 Code Text ตัวอย่างโค้ด***
 ```cpp
