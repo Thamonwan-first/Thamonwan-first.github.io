@@ -109,20 +109,32 @@ body {
   border-radius: 4px;
 }
 
-/* สำหรับ Rouge syntax highlighter */
+/* ---------- โค้ดบล็อกหลัก ---------- */
 .highlight {
-  background: #2d2d2d;
+  background: #282a36;   /* พื้นหลังสีม่วงเข้มแบบ VS Code/Dracula */
+  color: #f8f8f2;        /* สีตัวอักษรปกติ */
   border-radius: 10px;
   padding: 16px;
   overflow-x: auto;
+  font-family: "Fira Code", Consolas, monospace;
+  font-size: 15px;
+  line-height: 1.6;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
-/* สี syntax ของ Rouge */
-.highlight .k { color: #66d9ef; }   /* keywords เช่น for, if, while */
-.highlight .c { color: #75715e; }   /* comment */
-.highlight .s { color: #e6db74; }   /* string */
-.highlight .n { color: #f8f8f2; }   /* normal text */
-
+/* ---------- การไฮไลต์ syntax ของ Rouge ---------- */
+.highlight .k { color: #ff79c6; }   /* keyword เช่น void, if, for */
+.highlight .c { color: #6272a4; }   /* comment */
+.highlight .cm { color: #6272a4; }  /* multiline comment */
+.highlight .s { color: #f1fa8c; }   /* string เช่น "..." */
+.highlight .se { color: #f1fa8c; }  /* escape sequence */
+.highlight .mi { color: #bd93f9; }  /* numbers */
+.highlight .mf { color: #bd93f9; }  /* float numbers */
+.highlight .n { color: #f8f8f2; }   /* ชื่อฟังก์ชัน ตัวแปร */
+.highlight .nf { color: #50fa7b; }  /* ชื่อฟังก์ชันที่กำหนดเอง */
+.highlight .nb { color: #8be9fd; }  /* built-in เช่น Serial, Blynk */
+.highlight .o { color: #ff79c6; }   /* operators เช่น =, +, - */
+.highlight .p { color: #f8f8f2; }   /* punctuation เช่น ; , () */
 /* ===========================
    Footer
    =========================== */
