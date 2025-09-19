@@ -16,3 +16,4 @@ kramdown:
   syntax_highlighter: rouge
   auto_ids: true
   attribute_list: true  # <-- เปิดใช้งาน attribute list
+  syntax_highlighter: rouge
