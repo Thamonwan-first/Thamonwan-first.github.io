@@ -130,7 +130,7 @@ body {
 .highlight .se { color: #f1fa8c; }  /* escape sequence */
 .highlight .mi { color: #bd93f9; }  /* numbers */
 .highlight .mf { color: #bd93f9; }  /* float numbers */
-.highlight .n { color: #ed5813; }   /* ชื่อฟังก์ชัน ตัวแปร */
+.highlight .n { color: #f8f8f2; }   /* ชื่อฟังก์ชัน ตัวแปร */
 .highlight .nf { color: #50fa7b; }  /* ชื่อฟังก์ชันที่กำหนดเอง */
 .highlight .nb { color: #8be9fd; }  /* built-in เช่น Serial, Blynk */
 .highlight .o { color: #ff79c6; }   /* operators เช่น =, +, - */
